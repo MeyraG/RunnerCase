@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     }
     public void StartTheGame()
     {
-        isPlaying = true;        
+        isPlaying = true;
     }
 
     public void EndGame()
@@ -35,11 +35,9 @@ public class GameManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Level_end")
         {
-            Debug.Log("Replay çalışıyo");
             isPlaying = true;
             SceneManager.LoadScene("Level_01");
         }
-       
     }
 
     public void Quit()

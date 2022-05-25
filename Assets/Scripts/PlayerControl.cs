@@ -14,21 +14,23 @@ public class PlayerControl : MonoBehaviour
 
     float horizontalInput;
 
-    public float leftSide;
-    public float rightSide;
+    [SerializeField]
+    float leftSide;
+
+    [SerializeField]
+    float rightSide;
 
     public GameManager gameManager;
 
     void FixedUpdate()
     {
-
         if (gameManager.isPlaying)
         {
             Move();
         }
     }
 
-    public void Move()
+    private void Move()
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
 
